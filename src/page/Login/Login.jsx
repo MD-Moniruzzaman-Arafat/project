@@ -1,10 +1,12 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Context/Context";
+import { FcGoogle } from "react-icons/fc";
 
 const Login = () => {
 
-    const { signInUser } = useContext(AuthContext);
+    const { signInUser, googleSignIn, user } = useContext(AuthContext);
+    console.log(user)
 
     const handleSignIn = (e) => {
         e.preventDefault();
@@ -15,6 +17,16 @@ const Login = () => {
         signInUser(email, password)
             .then(result => {
                 console.log(result.user)
+            })
+            .catch(error => {
+                console.log(error)
+            })
+    }
+
+    const googleLogIn = () => {
+        googleSignIn()
+            .then(result => {
+                console.log(result)
             })
             .catch(error => {
                 console.log(error)
@@ -46,9 +58,10 @@ const Login = () => {
                                 </label>
                             </div>
                             <div className="form-control mt-6">
-                                <button className="btn btn-primary">Login</button>
+                                <button className="btn btn-primary">Login</button><br />
+                                <p>you dont have an account <Link to={"/registration"} className="btn btn-link">registration</Link></p>
+                                <button onClick={googleLogIn} className="btn btn-outline btn-info"><FcGoogle></FcGoogle>Google</button>
                             </div>
-                            <p>you dont have an account <Link to={"/registration"} className="btn btn-link">registration</Link></p>
                         </form>
                     </div>
                 </div>
