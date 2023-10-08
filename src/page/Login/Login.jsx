@@ -1,13 +1,18 @@
 import { useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { AuthContext } from "../../Context/Context";
 import { FcGoogle } from "react-icons/fc";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
 
     const { signInUser, googleSignIn, user } = useContext(AuthContext);
-    const navigate = useNavigate()
+    // const navigate = useNavigate()
     console.log(user)
+
+    const notify = () => toast("Login successfull");
+    const notify1 = () => toast("your email and password don't match");
 
     const handleSignIn = (e) => {
         e.preventDefault();
@@ -18,26 +23,39 @@ const Login = () => {
         signInUser(email, password)
             .then(result => {
                 console.log(result.user)
-                navigate("/")
+                notify()
+                e.target.reset()
             })
             .catch(error => {
                 console.log(error)
+                notify1()
             })
+        // if (email === emailError.email) {
+        //     console.log("ok")
+        // } else {
+        //     console.log("dont match")
+        // }
     }
+
 
     const googleLogIn = () => {
         googleSignIn()
             .then(result => {
                 console.log(result)
-                navigate("/")
+                // navigate("/")
+                notify()
+
             })
             .catch(error => {
                 console.log(error)
+                notify1()
+
             })
     }
 
     return (
         <div>
+            <ToastContainer></ToastContainer>
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col w-full">
                     <div className="text-center lg:text-left">

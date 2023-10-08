@@ -1,3 +1,4 @@
+import { ToastContainer } from "react-toastify";
 import Slider from "../../component/Slider/Slider";
 import Teacher from "../../component/Teacher/Teacher";
 import About from "../About/About";
@@ -10,6 +11,7 @@ const Home = () => {
 
     return (
         <div>
+            <ToastContainer></ToastContainer>
             <Slider></Slider>
             <About></About>
 

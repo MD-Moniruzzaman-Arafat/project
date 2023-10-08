@@ -1,10 +1,14 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Context/Context";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const Registration = () => {
 
     const { createUser } = useContext(AuthContext);
+
+    const notify = () => toast("Registration successfull");
+    const notify1 = () => toast("is less than 6 characters don't have a capital letter don't have a special character");
 
     // handleRegistration
     const handleRegistration = (e) => {
@@ -13,18 +17,28 @@ const Registration = () => {
         const password = e.target.password.value;
         console.log(email, password)
 
-        createUser(email, password)
-            .then(result => {
-                console.log(result.user)
-            })
-            .catch(error => {
-                console.log(error)
-            })
+        if (/^(?=.*[A-Z])(?=.*[!@#$%^&*()_+{}[\]:;<>,.?~\\/-])[A-Za-z\d!@#$%^&*()_+{}[\]:;<>,.?~\\/-]{6,}$/.test(password)) {
+            createUser(email, password)
+                .then(result => {
+                    console.log(result.user)
+                    notify()
+                })
+                .catch(error => {
+                    console.log(error)
+
+                })
+        }
+        else {
+            notify1()
+        }
+
+
     }
 
 
     return (
         <div>
+            <ToastContainer></ToastContainer>
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col w-full">
                     <div className="text-center lg:text-left">
