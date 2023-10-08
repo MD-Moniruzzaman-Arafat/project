@@ -1,4 +1,3 @@
-import Footer from "../../component/Footer/Footer";
 import Slider from "../../component/Slider/Slider";
 import Teacher from "../../component/Teacher/Teacher";
 import About from "../About/About";
@@ -7,7 +6,6 @@ import { useLoaderData } from "react-router-dom";
 
 
 const Home = () => {
-
     const coursesData = useLoaderData()
 
     return (
@@ -33,7 +31,6 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <Footer></Footer>
         </div>
     );
 };

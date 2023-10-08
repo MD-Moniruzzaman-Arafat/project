@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Courses = ({ singleData }) => {
 
-    const { id, image, details, fees_and_funding, how_to_apply, requirement, teacher_img, teacher_name, title } = singleData;
+    const { id, image, details, fees_and_funding, title } = singleData;
     return (
         <div>
             <Link to={`/${id}`}>

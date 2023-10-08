@@ -1,7 +1,7 @@
 
 const Events = () => {
     return (
-        <div>
+        <div className="h-screen">
             <h1>Events</h1>
         </div>
     );

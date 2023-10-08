@@ -2,13 +2,13 @@ import { createBrowserRouter } from "react-router-dom";
 import MainRoot from "../MainRoot/MainRoot";
 import Home from "../page/Home/Home";
 import About from "../page/About/About";
-import Courses from "../page/Courses/Courses";
 import Events from "../page/Events/Events";
 import Blog from "../page/Blog/Blog";
 import Login from "../page/Login/Login";
 import Registration from "../page/Registration/Registration";
 import ErrorPage from "../page/ErrorPage/ErrorPage";
 import Details from "../page/Details/Details";
+import PrivateRoute from "../privateRoute/PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -27,11 +27,11 @@ const router = createBrowserRouter([
             },
             {
                 path: "/event",
-                element: <Events></Events>
+                element: <PrivateRoute><Events></Events></PrivateRoute>
             },
             {
                 path: "/blog",
-                element: <Blog></Blog>
+                element: <PrivateRoute><Blog></Blog></PrivateRoute>
             },
             {
                 path: "/login",
@@ -44,7 +44,7 @@ const router = createBrowserRouter([
             {
                 path: "/:id",
                 loader: () => fetch('/course.json'),
-                element: <Details></Details>
+                element: <PrivateRoute><Details></Details></PrivateRoute>
             }
 
         ]

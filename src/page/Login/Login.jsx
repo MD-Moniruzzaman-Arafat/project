@@ -1,11 +1,12 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Context/Context";
 import { FcGoogle } from "react-icons/fc";
 
 const Login = () => {
 
     const { signInUser, googleSignIn, user } = useContext(AuthContext);
+    const navigate = useNavigate()
     console.log(user)
 
     const handleSignIn = (e) => {
@@ -17,6 +18,7 @@ const Login = () => {
         signInUser(email, password)
             .then(result => {
                 console.log(result.user)
+                navigate("/")
             })
             .catch(error => {
                 console.log(error)
@@ -27,6 +29,7 @@ const Login = () => {
         googleSignIn()
             .then(result => {
                 console.log(result)
+                navigate("/")
             })
             .catch(error => {
                 console.log(error)

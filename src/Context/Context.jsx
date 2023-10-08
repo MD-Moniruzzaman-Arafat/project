@@ -12,21 +12,25 @@ const Context = ({ children }) => {
 
     // google SignIn
     const googleSignIn = () => {
+        setLoder(true)
         return signInWithPopup(auth, googleProvider)
     }
 
     // create user
     const createUser = (email, password) => {
+        setLoder(true)
         return createUserWithEmailAndPassword(auth, email, password);
     }
 
     // signIn user
     const signInUser = (email, password) => {
+        setLoder(true)
         return signInWithEmailAndPassword(auth, email, password);
     }
 
     // logOut
     const logOut = () => {
+        setLoder(true)
         return signOut(auth);
     }
 
