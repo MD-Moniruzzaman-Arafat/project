@@ -8,6 +8,7 @@ import Blog from "../page/Blog/Blog";
 import Login from "../page/Login/Login";
 import Registration from "../page/Registration/Registration";
 import ErrorPage from "../page/ErrorPage/ErrorPage";
+import Details from "../page/Details/Details";
 
 const router = createBrowserRouter([
     {
@@ -25,10 +26,6 @@ const router = createBrowserRouter([
                 element: <About></About>
             },
             {
-                path: "/courses",
-                element: <Courses></Courses>
-            },
-            {
                 path: "/event",
                 element: <Events></Events>
             },
@@ -43,6 +40,11 @@ const router = createBrowserRouter([
             {
                 path: "/registration",
                 element: <Registration></Registration>
+            },
+            {
+                path: "/:id",
+                loader: () => fetch('/course.json'),
+                element: <Details></Details>
             }
 
         ]
