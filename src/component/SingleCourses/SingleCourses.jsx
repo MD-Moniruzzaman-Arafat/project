@@ -1,9 +1,8 @@
 import PropTypes from 'prop-types';
 
-
-const Courses = ({ singleData }) => {
-
-    const { image, details, fees_and_funding, how_to_apply, requirement, teacher_img, teacher_name, title } = singleData;
+const SingleCourses = ({ singleCourse }) => {
+    console.log(singleCourse)
+    const { image, details, fees_and_funding, how_to_apply, requirement, teacher_img, teacher_name, title } = singleCourse;
     return (
         <div>
             <div className="card w-96 bg-base-100 shadow-xl">
@@ -21,8 +20,8 @@ const Courses = ({ singleData }) => {
     );
 };
 
-Courses.propTypes = {
-    singleData: PropTypes.object,
+SingleCourses.propTypes = {
+    singleCourse: PropTypes.object,
 }
 
-export default Courses;
+export default SingleCourses;

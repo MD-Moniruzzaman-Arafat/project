@@ -2,7 +2,7 @@
 const About = () => {
     return (
         <div>
-            <div className="flex items-center gap-5">
+            <div className="flex md:flex-row lg:flex-row flex-col  items-center gap-5 w-4/5 mx-auto">
                 <div className="w-1/2 space-y-5">
                     <h1 className="text-4xl font-bold">About Educenter</h1>
                     <p className="text-justify">In a world where education knows no boundaries, [Online Education System Name] stands as a beacon of e-learning excellence. Established in [Year], our platform has bridged distances, transcending traditional classroom walls to bring quality education right to the fingertips of learners worldwide.

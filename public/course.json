@@ -1,0 +1,68 @@
+[
+    {
+        "id": 1,
+        "image": "https://i.ibb.co/W0tc5sv/Best-College-for-Photography-Course-in-Mumbai.jpg",
+        "title": "Photography Essentials",
+        "details": "Dive deep into the world of photography and understand the nuances of shutter speed, aperture, and ISO. Learn from real-world scenarios and hone your skills to capture the world through a lens.",
+        "requirement": "Basic understanding of camera operation.",
+        "how_to_apply": "Visit our website and fill out the application form.",
+        "fees_and_funding": "$200 with scholarship available.",
+        "teacher_name": "John Doe",
+        "teacher_img": "https://i.ibb.co/7bz0ptS/images.jpg"
+    },
+    {
+        "id": 2,
+        "image": "https://i.ibb.co/nj7089R/programming-courses-back.jpg",
+        "title": "Mastering Programming",
+        "details": "Delve into the realms of coding and software development. Understand algorithms, data structures, and the art of solving real-world problems using programming.",
+        "requirement": "Prior experience in a programming language is beneficial.",
+        "how_to_apply": "Apply online through our course portal.",
+        "fees_and_funding": "$250 with partial funding options.",
+        "teacher_name": "Jane Smith",
+        "teacher_img": "https://i.ibb.co/TRyc1bd/shutterstock-303112742-1.jpg"
+    },
+    {
+        "id": 3,
+        "image": "https://i.ibb.co/wyY0ys5/992419b0ae5e2f176876baaa448fb3ae.jpg",
+        "title": "Lifestyle Chronicles",
+        "details": "Discover the secrets behind living a fulfilled life. This course uncovers the art of mindful living, sustainable habits, and creating a personal lifestyle that resonates with your true self.",
+        "requirement": "An open mind and a willingness to learn.",
+        "how_to_apply": "Sign up on our official lifestyle course page.",
+        "fees_and_funding": "$150 with early bird discounts.",
+        "teacher_name": "Alice Williams",
+        "teacher_img": "https://i.ibb.co/JphNBnM/Male-Teacher-Gifts.jpg"
+    },
+    {
+        "id": 4,
+        "image": "https://i.ibb.co/3N7D4gk/1632753813668.jpg",
+        "title": "Freelancing in Tech",
+        "details": "Embark on the journey of being your own boss. Learn the intricacies of setting up a freelancing career in the tech world, from finding clients to managing your projects efficiently.",
+        "requirement": "A foundational understanding of computer technology.",
+        "how_to_apply": "Enroll through our freelancing courses section.",
+        "fees_and_funding": "$220, payment plans available.",
+        "teacher_name": "Bob Martin",
+        "teacher_img": "https://i.ibb.co/fMghYxh/235542859.jpg"
+    },
+    {
+        "id": 5,
+        "image": "https://i.ibb.co/YWq6jMz/160455457801.jpg",
+        "title": "Branding Mastery",
+        "details": "Transform businesses by creating compelling brand identities. This course will guide you through the principles of branding, design strategies, and the impact of effective brand communication.",
+        "requirement": "Basic design knowledge is recommended.",
+        "how_to_apply": "Visit our design courses page to register.",
+        "fees_and_funding": "$300 with group discounts.",
+        "teacher_name": "Clara Jones",
+        "teacher_img": "https://i.ibb.co/K04kTBS/D2115-185-452-1200.jpg"
+    },
+    {
+        "id": 6,
+        "image": "https://i.ibb.co/9yS53PL/can-i-get-a-graphic-design-degree-online.jpg",
+        "title": "The World of Art Design",
+        "details": "Immerse yourself in the diverse and dynamic world of art design. From traditional techniques to digital artistry, explore the mediums, tools, and philosophies that shape visual art in contemporary settings.",
+        "requirement": "Passion for artistic expression.",
+        "how_to_apply": "Submit your portfolio and apply on our arts course page.",
+        "fees_and_funding": "$280 with student scholarships.",
+        "teacher_name": "David Brown",
+        "teacher_img": "https://i.ibb.co/CtjMmnM/248569549.jpg"
+    }
+]

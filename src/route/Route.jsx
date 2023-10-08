@@ -7,15 +7,18 @@ import Events from "../page/Events/Events";
 import Blog from "../page/Blog/Blog";
 import Login from "../page/Login/Login";
 import Registration from "../page/Registration/Registration";
+import ErrorPage from "../page/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <MainRoot></MainRoot>,
+        errorElement: <ErrorPage />,
         children: [
             {
                 path: "/",
-                element: <Home></Home>
+                element: <Home></Home>,
+                loader: () => fetch('/course.json')
             },
             {
                 path: "/about",

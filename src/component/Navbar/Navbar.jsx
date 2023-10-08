@@ -29,7 +29,7 @@ const Navbar = () => {
 
     return (
         <div>
-            <div className="navbar bg-base-100">
+            <div className="navbar bg-slate-50">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -41,7 +41,7 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <a className="btn btn-ghost normal-case text-xl">
-                        <img src=" https://i.ibb.co/0VJyfvQ/undraw-Speech-to-text-re-8mtf.png" alt="" className="w-20" />
+                        eduCenter
                     </a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
@@ -55,14 +55,12 @@ const Navbar = () => {
                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                             <div className="w-10 rounded-full">
                                 {
-
                                     user ? <img src={user.photoURL} alt="" /> : <img src="https://i.ibb.co/R6dVT9q/profile-circle-icon-512x512-zxne30hp.png" />
                                 }
                             </div>
                         </label>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                             {
-
                                 user ? <li onClick={handleLogOut}><a>Logout</a></li> : <li><Link to={"/login"}>Login</Link></li>
                             }
                         </ul>
