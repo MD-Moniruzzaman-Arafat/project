@@ -5,7 +5,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const Registration = () => {
 
-    const { createUser } = useContext(AuthContext);
+    const { createUser, updateUser } = useContext(AuthContext);
 
     const notify = () => toast("Registration successfull");
     const notify1 = () => toast("is less than 6 characters don't have a capital letter don't have a special character");
@@ -13,6 +13,7 @@ const Registration = () => {
     // handleRegistration
     const handleRegistration = (e) => {
         e.preventDefault();
+        const name = e.target.name;
         const email = e.target.email.value;
         const password = e.target.password.value;
         console.log(email, password)
@@ -21,6 +22,11 @@ const Registration = () => {
             createUser(email, password)
                 .then(result => {
                     console.log(result.user)
+                    updateUser(result.user, {
+                        displayName: name
+                    })
+                        .then(() => { console.log("profile update") })
+                        .catch(error => { console.log(error) })
                     notify()
                 })
                 .catch(error => {
@@ -46,6 +52,12 @@ const Registration = () => {
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <form className="card-body" onSubmit={handleRegistration}>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Name</span>
+                                </label>
+                                <input type="text" placeholder="name" className="input input-bordered" name="name" required />
+                            </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>
