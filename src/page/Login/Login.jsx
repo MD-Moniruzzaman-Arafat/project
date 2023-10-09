@@ -81,9 +81,10 @@ const Login = () => {
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary">Login</button><br />
                                 <p>you dont have an account <Link to={"/registration"} className="btn btn-link">registration</Link></p>
-                                <button onClick={googleLogIn} className="btn btn-outline btn-info"><FcGoogle></FcGoogle>Google</button>
                             </div>
                         </form>
+                        <button onClick={googleLogIn} className="btn btn-outline btn-info m-5"><FcGoogle></FcGoogle>Google</button>
+
                     </div>
                 </div>
             </div>

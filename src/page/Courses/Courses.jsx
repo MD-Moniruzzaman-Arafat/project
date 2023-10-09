@@ -6,9 +6,9 @@ const Courses = ({ singleData }) => {
 
     const { id, image, details, fees_and_funding, title } = singleData;
     return (
-        <div>
+        <div >
             <Link to={`/${id}`}>
-                <div className="card w-96 bg-base-100 shadow-xl">
+                <div className="card w-96 bg-base-100 shadow-xl" data-aos="zoom-in">
                     <figure><img src={image} alt="Shoes" className="w-full h-64" /></figure>
                     <div className="card-body">
                         <h2 className="card-title">{title}</h2>

@@ -10,12 +10,12 @@ const Home = () => {
     const coursesData = useLoaderData()
 
     return (
-        <div>
+        <div >
             <ToastContainer></ToastContainer>
             <Slider></Slider>
             <About></About>
 
-            <div className="w-10/12 mx-auto space-y-10">
+            <div className="w-10/12 mx-auto space-y-10" >
                 <div className="space-y-5">
                     <h1 className="text-4xl font-bold">Our Courses</h1>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">

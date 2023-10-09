@@ -18,9 +18,10 @@ const Details = () => {
     const { image, details, fees_and_funding, how_to_apply, requirement, teacher_img, teacher_name, title } = showData;
 
 
+
     return (
-        <div>
-            <div className="hero min-h-screen bg-base-200">
+        <div data-aos="fade-up">
+            <div className="hero  bg-base-200" >
                 <div className="hero-content flex-col lg:flex-row">
                     <img src={image} className="max-w-sm rounded-lg shadow-2xl" />
                     <div className="space-y-2">
@@ -34,7 +35,7 @@ const Details = () => {
             </div>
             <h1 className="text-center font-bold text-5xl">Teacher</h1>
 
-            <div className="hero min-h-screen bg-base-200">
+            <div className="hero  bg-base-200">
 
                 <div className="hero-content flex-col lg:flex-row">
                     <img src={teacher_img} className="max-w-sm rounded-lg shadow-2xl" />
